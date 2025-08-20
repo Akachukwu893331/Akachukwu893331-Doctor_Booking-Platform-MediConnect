@@ -154,7 +154,7 @@ export default async function DoctorDashboardPage() {
               Welcome back, Dr. {user?.name || "User"} 👋
             </h2>
             <p className="text-muted-foreground">
-              Here you can manage your availability, view appointments, and
+              Here you can manage your availability, view patient appointments, and
               track your earnings all in one place.
             </p>
           </div>

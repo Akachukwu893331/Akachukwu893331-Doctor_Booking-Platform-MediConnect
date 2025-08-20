@@ -14,6 +14,7 @@ import { checkUser } from "@/lib/checkUser";
 import { checkAndAllocateCredits } from "./../actions/credits";
 
 
+
 const header = async () => {
   const user =await checkUser();
   if (user?.role === "PATIENT"){
@@ -22,17 +23,23 @@ const header = async () => {
 
 
   return (
-    <header className='fixed top-0 w-full border-b bg-background/80 backdrop-blur-md z-10 supports-[backdrop-filter]:bg-background/60'>
+    <header className='fixed top-0 w-full border-b bg-black backdrop-blur-md z-10 supports-[backdrop-filter]:bg-background/100'>
         <nav className='container mx-auto px-4 h-16 flex items-center justify-between'>
-            <Link href="/">
-                <Image
-                    src="/logo-single.png"
-                    alt="Medimeet Logo"
-                    width={200}
-                    height={60}
-                    className="h-10 w-auto object-contain"
-                />
-            </Link>
+         <Link href="/" className="flex items-center gap-1.5 group">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/901/901122.png"
+              alt="Mediconnect Logo"
+              className="w-10 h-10 object-contain transition-transform duration-300 group-hover:scale-105"
+            />
+            <div className="flex flex-col justify-center">
+              <span className="text-lg font-bold bg-gradient-to-r from-emerald-600 to-white bg-clip-text text-transparent leading-none">
+                Mediconnect
+              </span>
+              <span className="text-xs text-muted-foreground hidden sm:block leading-none">
+                Connecting Patients & Doctors
+              </span>
+            </div>
+          </Link>
 
 
             <div className="flex items-center space-x-2">
