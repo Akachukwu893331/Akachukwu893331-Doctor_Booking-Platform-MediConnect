@@ -189,7 +189,7 @@ export default function Home() {
                 </Button>
               </div>
               <Image
-                src="/video-consultation.jpg"
+                src="/banner.png"
                 alt="Video consultation"
                 fill
                 className="object-cover"
